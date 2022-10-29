@@ -68,3 +68,98 @@ const inventory = [
 
         }
     ]
+
+    //function declaration ---available to hoist 
+
+    const book = inventory[0]
+
+    function priceFunc(book) {
+        return console.log(`$${book.price.toFixed(2)}`)
+    }
+
+    priceFunc(book)
+
+    //function  expression ---not available to hoist 
+
+    const outputTitle = function() {
+       console.log(`Title: ${book.title}`) 
+    }
+
+    outputTitle(book)
+
+    // arrow function pt 1 
+    const onSaleBook = book => console.log(`${book.title} by ${book.author} is on sale!`)
+    
+    onSaleBook(book)
+
+    // arrow function pt 2 
+    const discountBook = (book, discount) => {
+        console.log(`${(book.price/discount).toFixed(2)}`)
+    }
+
+    discountBook(book, 2)
+    
+    // a variable in a global scope 
+
+    const bookTitle = book.title 
+
+    // function 
+
+    function addNewBook(title, price, author, imageUrl) {
+        newObj = {}
+            newObj.title = title 
+            newObj.price = price
+            newObj.author = author
+            newObj.imageUrl = imageUrl
+            newObj.key = 0 
+            newObj.reviews = []
+
+        if(!imageUrl) {
+           newObj.imageUrl="/placeHolderImage.jpg"
+        } else {
+           newObj.imageUrl = imageUrl
+        }
+
+        return newObj
+    }
+
+    let newBook = addNewBook("Ellie", 1000, "Park", false);
+
+    // This needs to be handles on global scope 
+    inventory.push(newBook);
+    console.log(inventory);
+
+    // callbacks demo 
+
+    function pullTitle(book) {
+        return book.title;
+    }
+
+    function demoCallback(inventory, callback) {
+        let bookTitles = [];
+        for (let book of inventory) {
+            bookTitles.push(callback(book))
+        }
+        
+        return bookTitles
+    }
+
+   console.log(demoCallback(inventory, pullTitle))
+
+   // callback bonus + .map 
+
+   function pullPrice(book) {
+        return book.price
+   }
+
+   function mapOverPrice(inventory, callback) {
+        let newArray = [];  
+        for (let book of inventory) {
+            newArray.push(callback(book))
+        }
+       
+        return newArray;
+   }
+
+   console.log(mapOverPrice(inventory,pullPrice).map(price => price + 12))
+   

@@ -30,25 +30,25 @@ The variable inventory is an array of book objects in index.js. Inventory[0] is 
         }
 ```
 
-- Demo Function Decoration: 
-    - Declare a function that takes a book as a parameter and returns the book's price formatted to look like currency. Given inventory[0] the return should be '$10.00"
+<!-- - Demo Function Decoration: 
+    - Declare a function that takes a book as a parameter and returns the book's price formatted to look like currency. Given inventory[0] the return should be '$10.00" -->
     
-- Demo Function Expressions: 
-    - Create a function Expression that takes a book as a parameter and returns a string consisting of the title and author of the book. Given inventory[0] the return should be 'Title: Eloquent JavaScript: A Modern Introduction to Programming by Marjin Haverbeke'
-- Demo arrow functions pt1: 
-    - Create an arrow function that takes a book as a parameter and returns a string noting a book is on sale. Given inventory[0] the return should be 'Eloquent JavaScript: A Modern Introduction to Programming by Marjin Haverbeke is on sale!'
--  Demo arrow functions pt2: 
-    - Create an arrow function that takes a discount and a book as parameters. Return the book price divided by the discount. Given inventory[0] and 2 the return should be 5.00
+<!-- - Demo Function Expressions: 
+    - Create a function Expression that takes a book as a parameter and returns a string consisting of the title and author of the book. Given inventory[0] the return should be 'Title: Eloquent JavaScript: A Modern Introduction to Programming by Marjin Haverbeke' -->
+<!-- - Demo arrow functions pt1: 
+    - Create an arrow function that takes a book as a parameter and returns a string noting a book is on sale. Given inventory[0] the return should be 'Eloquent JavaScript: A Modern Introduction to Programming by Marjin Haverbeke is on sale!' -->
+<!-- -  Demo arrow functions pt2: 
+    - Create an arrow function that takes a discount and a book as parameters. Return the book price divided by the discount. Given inventory[0] and 2 the return should be 5.00 -->
 - Demo Scope: 
-    - Create a variable in the global scope and set it to a book's title. 
-    - Create a function that takes title, price, author, and imageUrl as parameters. 
+    <!-- - Create a variable in the global scope and set it to a book's title.  -->
+    <!-- - Create a function that takes title, price, author, and imageUrl as parameters. 
     - Create a variable in function scope and set it to an empty object. 
-    - Assign the object the properties of title, price, and author with their values set to their corresponding parameters. Add a key of inventory and set it to 0, and a key of reviews set to an empty array. 
-    - Create a conditional statement that checks whether the imageUrl has a value. If it has a value, give the object the property of imageUrl with its value set to the parameter. Else create a variable with the value of 'placeHolderImage.jpg' within block scope and give the object property of imageUrl set to the variable in block scope. (Note: we can give the parameter a default value here, but this section's purpose is to demo scope.)
+    - Assign the object the properties of title, price, and author with their values set to their corresponding parameters. Add a key of inventory and set it to 0, and a key of reviews set to an empty array.  -->
+    <!-- - Create a conditional statement that checks whether the imageUrl has a value. If it has a value, give the object the property of imageUrl with its value set to the parameter. Else create a variable with the value of 'placeHolderImage.jpg' within block scope and give the object property of imageUrl set to the variable in block scope. (Note: we can give the parameter a default value here, but this section's purpose is to demo scope.) -->
 
-    - Return book object 
+    <!-- - Return book object 
     - Invoke the function with arguments and pass it to inventory.push so the return value is added to the inventory array.
-    - Show the different levels of scope using console.logs or debuggers. Where do we have access to variables declared in global scope? Where do we have access to variables declared in function scope? Where do we have access to variables declared at the block level? What does local scope mean?
+    - Show the different levels of scope using console.logs or debuggers. Where do we have access to variables declared in global scope? Where do we have access to variables declared in function scope? Where do we have access to variables declared at the block level? What does local scope mean? -->
 - Demo Callbacks
     - Create a function that takes a callback function and an array
     - Inside the function create a variable and set it to an empty array.
@@ -65,7 +65,7 @@ The variable inventory is an array of book objects in index.js. Inventory[0] is 
 Functions are like a little program. They consist of a set of statements/tasks and return a value or undefined. 
 
 ```
-// This is a function delcoration 
+// This is a function declaration 
 // This function is returning the string of 'hi'
 function sayHi() {
     return 'hi'
