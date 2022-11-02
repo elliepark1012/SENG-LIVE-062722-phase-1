@@ -14,17 +14,17 @@
 ### Lecture 2
 data.js contains Book Store data for the application. It’s loaded before our index.js giving us access to the variable bookStore. 
 
-- Demo querySelector:    
-    - Create a function that sets the text content of the header to the bookstore name.
+<!-- - Demo querySelector:    
+    - Create a function that sets the text content of the header to the bookstore name. -->
 
-- Demo querySelectorAll:   
-    - Create a function that grabs all the divs from the footer. Render the bookstore name,, address, and hours 
-- Demo createElement   
+<!-- - Demo querySelectorAll:   
+    - Create a function that grabs all the divs from the footer. Render the bookstore name,, address, and hours  -->
+<!-- - Demo createElement   
     - Iterate through bookdata.inventory (an array of book objects). For every object in the array create a li, h3 , 2 ptags, image, and button elements. 
     - Add a book title to the h3 text content, the author and price to the ptags, and ‘Delete’ to the button. 
     - Add the imageUrl to the img.src and a class to the li of ‘list-li.’ (This is for some css in our style sheet.)
     - Append the h2, ptags, image, and button to the li 
-    - Select the ul with the id of ‘book-list’ and append the li
+    - Select the ul with the id of ‘book-list’ and append the li -->
 - Refactor:
     - Take the callback function out of the forEach and set it to a variable so it can be reused in other areas of our code. 
 
